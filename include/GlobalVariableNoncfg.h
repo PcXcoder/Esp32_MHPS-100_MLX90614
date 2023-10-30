@@ -11,3 +11,7 @@ static uint8_t taskCoreZero = 1;
 
 int tempc = 0;   
 int tempc2 = 0; 
+
+SdFat SD;      
+
+File myFile;
