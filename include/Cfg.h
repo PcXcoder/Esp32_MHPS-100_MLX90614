@@ -5,6 +5,8 @@ int timeout = 5; // tempo minimo de codigo 5ms
 #define SDA_1 33  // define o i2c lcd
 #define SCL_1 32 
 
+#define SD_FAT_TYPE 3 // define o tipo de sd usado
+
 #define SDA_2 27  // define o i2c ir
 #define SCL_2 26
 
@@ -13,7 +15,7 @@ int timeout = 5; // tempo minimo de codigo 5ms
 #define MOSI  23
 #define CS  5
 
-int lcdColumns = 16;         // linha coluna lsd
+int lcdColumns = 20;         // linha coluna lsd
 int lcdRows = 2;
 
 SPIClass spi = SPIClass(HSPI); // Hspi ou Vspi funciona depende do sd
@@ -24,6 +26,8 @@ int lcdSlow = 250; //tempo do lcd dar refresh
 
 const byte IRL = 0x5b;          //0x5b é o factry addres da pra mudar L= left R= right
 const byte IRR = 0x5b;
+
+const byte LCDid = 0x27;        //0x27 é o dactory addres, pode mudar dependendo do fabricante
 
 
 
